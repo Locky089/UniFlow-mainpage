@@ -1,0 +1,20 @@
+include ../../feature-card/feature-card
+include ../../promo-card/promo-card
+
+- var items1 = [{icon:"bone",label:"Улучшает подвижность суставов"},{icon:"stress",label:"Снижает внутреннее напряжение"},{icon:"sleep",label:"Настраивает ваше тело на сон"}]
+- var items2 = [{icon:"clamps",label:"Освобождает мышцы от зажимов"},{icon:"tissue",label:"Улучшает циркуляцию и питание тканей"},{icon:"relax",label:"Даёт ощущение лёгкости и комфорта"}]
+
+.efficiency-section
+    .efficiency-section__container
+        .efficiency-section__header-block 
+            .efficiency-section__subtitle 
+                .tag #эффективность
+            .efficiency-section__main-header-block
+                h2.efficiency-section__title Почему это работает
+                p.efficiency-section__description Курс сочетает мягкую растяжку и миофасциальный релиз — техники, которые помогают телу устранить зажимы, дискомфорт и восстановить естественную работу в всех систем организма.
+        .efficiency-section__cards-block
+            +feature-card(1, 'Мягкая растяжка', 'feature-card--pink', items1)
+            +feature-card(2, 'Миофасциальный релиз', 'feature-card--blue', items2)
+
+        .efficiency-section__promo-card
+            +promo-card('Если вам это знакомо — курс поможет телу отпустить напряжение и вернуть свободу')

@@ -1,0 +1,55 @@
+.question-section
+    background-color: $color-text-20
+    overflow: hidden
+    position: relative
+    padding-top: 90px
+    padding-bottom: 344px
+    background-image: url('../img/question-section/question-section-mobile.webp')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+        
+
+    +sm-block()
+        padding-top: 120px
+        padding-bottom: 568px   
+        background-image: url('../img/question-section/question-section-tablet.webp')
+
+    +md-block()
+        padding-top: 184px
+        padding-bottom: 184px
+        background-image: url('../img/question-section/question-section-desktop.webp')
+
+    &__container
+        +container()
+
+        +sm-block()
+            +container()
+
+        +md-block()
+            display: flex
+            justify-content: flex-end
+
+
+    &__text-block
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        max-width: 440px
+        align-items: flex-start
+            
+
+    &__main-header-block
+
+    &__title
+        +h2()
+
+    &__button
+        margin-top: 30px    
+
+        +sm-block()
+            margin-top: 40px
+
+    &__desctiption
+        +text()
+            

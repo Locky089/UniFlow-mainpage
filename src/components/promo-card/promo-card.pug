@@ -1,0 +1,13 @@
+include ../button/button-link
+include ../mixins/svg
+
+mixin promo-card(title)
+
+    .promo-card
+        .promo-card__inner
+            .promo-card__header
+                .promo-card__icon
+                    +svg(20, 20, 'message-notification')
+                .promo-card__title= title
+            .promo-card__button
+                +button-link('Приобрести сейчас', 'button--main button--l button--full-width')

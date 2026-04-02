@@ -1,0 +1,135 @@
+.program-section
+    padding-top: $spacing-8
+    padding-bottom: $spacing-8
+    position: relative
+    z-index: 3
+    border-radius: $radius-3
+    background-color: $color-white-100
+    margin-top: -$spacing-4
+    margin-bottom: -$spacing-4
+
+
+    &__container
+        +container()
+        position: relative
+        z-index: 1
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            align-items: center
+
+    &__main-header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 730px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__description
+        +text()
+
+    &__right
+        display: flex
+        flex-direction: column
+        gap: $spacing-2
+
+        +md-block()
+            gap: $spacing-10
+
+    &__block
+        +md-block()
+            position: sticky
+            top: 10vh
+
+    &__left-content
+        border-radius: $radius-2
+
+        +md-block()
+            display: flex
+            aspect-ratio: 1/1
+            align-items: center
+            position: sticky
+            top: 10vh
+
+    &__left-content-text
+        display: flex
+        flex-direction: column
+        gap: $spacing-3
+        +md-block()
+            margin-bottom: $spacing-3
+
+        
+
+    &__left-content-inner
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3
+        align-items: flex-start
+        padding-bottom: $spacing-4
+        border-radius: $radius-2
+
+        +md-block()
+            padding-right: 120px    
+            border-top: none
+            
+
+    &__features-block-container
+        border-radius: $radius-3
+        padding-top: 1px
+        +gradient-main()
+
+    &__features-block
+        padding: $spacing-3
+        border-radius-top-left: $radius-3
+        border-radius-top-right: $radius-3
+        background-color: $color-white-100
+
+        +sm-block()
+            padding: $spacing-4
+
+        +md-block()
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: $spacing-3
+            border-radius: 30px
+            padding-top: $spacing-4
+            padding-left:  $spacing-4
+            padding-right:  $spacing-4
+            background-color: $color-white-100
+
+    &__courses
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-8
+
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: $spacing-8
+
+        +sm-block()
+            border-radius: $radius-3
+
+        +md-block()
+            gap: $spacing-8
+        
+

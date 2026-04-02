@@ -1,0 +1,41 @@
+.main-menu 
+    .main-menu__content 
+        .main-menu__logo 
+            img(src="img/logo.svg", alt="Uniflow")
+        ul.main-menu__nav 
+            li.main-menu__nav-item.main-menu__nav-item--dropdown
+                a.main-menu__nav-link(href="#program-section") Меню
+                    span.main-menu__nav-link-icon 
+                        +svg('16', '16', 'chevron-down')
+                .main-menu__list-wrapper.main-menu__list-wrapper--dropdown-inner
+                    ul.main-menu__list.main-menu__list--dropdown-inner
+                        li 
+                            a(href="#") Сезонные активности
+                        li
+                            a(href="#benefit") Преимущества
+                        li
+                            a(href="#direction") Направления
+                        li
+                            a(href="#club-card") Занятия по Клубной Карте
+                        li
+                            a(href="#fundamental-courses") Фундаментальные курсы
+                        li
+                            a(href="#express-courses") Экспресс-курсы
+                        li
+                            a(href="#team") Команда
+                        li
+                            a(href="#feedback") Отзывы
+                        li
+                            a(href="#faq") Часто задаваемые вопросы
+            li.main-menu__nav-item
+                a.main-menu__nav-link(href="#community-section") Сезонные активности
+        .main-menu__user-block 
+            a.link(href="#") 
+                span.link__icon
+                    +svg("16", "16", "person")
+                | Войти 
+            .main-menu__user-block-item.main-menu__user-block-item--mobile-only
+                button.button-icon.button__open-mobile-menu-js(href="#")
+                    +svg('20','20', 'burger')
+            .main-menu__user-block-item.main-menu__user-block-item--desktop-only
+                +button('Начать заниматься', 'button--main button--s')

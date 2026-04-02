@@ -1,0 +1,79 @@
+.focus-section
+    padding-top: $spacing-7
+    padding-bottom: $spacing-7
+    position: relative
+
+    &::after    
+        top: 60px
+        left: 50%
+        transform: translateX(-50%)
+        position: absolute
+        content: ''
+        width: 905px
+        height: 905px
+        background: url('../img/bg/circles.svg') no-repeat
+        background-position: center top
+        background-size: auto
+
+        +md-block()
+            top: 40px
+
+    &__container
+        +container()
+        position: relative
+        z-index: 1
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            align-items: center
+
+    &__main-header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 730px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__description
+        +description()
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 680px
+
+    &__cards-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+
+        +sm-block()
+            row-gap: $spacing-3
+
+        +md-block()
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: $spacing-3 
+
+        > :nth-child(odd)
+            +md-block()
+                padding-top: $spacing-7

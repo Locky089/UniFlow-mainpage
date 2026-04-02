@@ -1,0 +1,54 @@
+.community-section
+    padding-top: $spacing-7
+    padding-bottom: $spacing-7
+    position: relative
+
+
+    &__container
+        +container()
+        position: relative
+        z-index: 1
+
+    &__header
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            align-items: center
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 730px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__slider
+        padding-bottom: 30px
+
+    .swiper-pagination-bullet
+        width: 7px
+        height: 7px
+        background-color: $color-text-20
+        margin-left: 2px
+        margin-right: 2px
+
+    .swiper-pagination-bullet-active
+        +gradient-main()
+        
+

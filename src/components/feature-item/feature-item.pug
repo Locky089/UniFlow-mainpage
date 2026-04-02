@@ -1,0 +1,9 @@
+include ../mixins/svg
+
+mixin feature-item(title, subtitle, className, icon)
+    .feature-item(class= className)
+        .feature-item__icon
+            +svg(20, 20, icon)
+        .feature-item__info
+            .feature-item__subtitle= subtitle
+            .feature-item__title= title

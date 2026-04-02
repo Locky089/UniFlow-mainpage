@@ -1,0 +1,74 @@
+=h1()
+    font: $font-mob-h1
+    color: $color-text-100
+    letter-spacing: -0.04em
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-h1
+
+
+=h2()
+    font: $font-mob-h1
+    color: $color-text-100
+    letter-spacing: -0.04em
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-h2
+
+=h3()
+    font: $font-mob-h3
+    color: $color-text-100
+    letter-spacing: -0.04em
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-h3
+
+=h4()
+    font: $font-mob-h4
+    color: $color-text-100
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-h4
+
+    +md-block()
+        font: $font-large-h4
+
+=button-text()
+    font: $font-mob-button
+    color: $color-text-100
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-button
+
+
+=text()
+    font: $font-text
+    color: $color-text-100
+
+    @media (min-width: $breakpoint-tablet)
+        font: $font-text
+
+    +l-block()
+        font: $font-large-text
+
+=description()
+    +text()
+    color: $color-text-60
+
+    
+=tag()
+    font: $font-mob-tag
+    color: $color-text-100
+    text-transform: uppercase
+    @include gradient-text
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    display: inline-flex
+    letter-spacing: 0.2em
+    
+    @media (min-width: $breakpoint-tablet)
+        font: $font-tag
+
+p + p 
+    margin-top: $spacing-2

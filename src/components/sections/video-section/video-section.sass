@@ -1,0 +1,39 @@
+.video-section
+    position: relative
+    width: 100%
+    height: 526px
+    background-color: $color-blue-1
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-left: $spacing-3
+    padding-right: $spacing-3
+
+    &__title
+        position: relative
+        z-index: 3
+        text-align: center
+        font: $font-mob-h1
+        color: $color-white-100
+
+        +sm-block()
+            font: $font-h1
+
+
+
+    +sm-block()
+        height: 700px
+
+    &__video-container
+        position: absolute
+        content: ''
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: 2
+
+    &__video
+        width: 100%
+        height: 100%
+        object-fit: cover

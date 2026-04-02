@@ -1,0 +1,12 @@
+@mixin font-face($font-name, $path)
+  @font-face
+    font-family: quote($font-name)
+    src: url(#{$path}.woff2) format("woff2")
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+@include font-face('Manrope-Regular', '../fonts/Manrope-Regular')
+@include font-face('Manrope-Medium', '../fonts/Manrope-Medium')
+@include font-face('Manrope-SemiBold', '../fonts/Manrope-SemiBold')  
+@include font-face('Manrope-Bold', '../fonts/Manrope-Bold')  

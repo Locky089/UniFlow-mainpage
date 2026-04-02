@@ -1,0 +1,18 @@
+include ../../background-card/background-card
+include ../../promo-card/promo-card
+
+.pain-section
+    .pain-section__container
+        .pain-section__header-block 
+            .pain-section__subtitle 
+                .tag #кому подойдет этот курс
+            .pain-section__main-header-block
+                h2.pain-section__title Когда день заканчивается усталостью, а не отдыхом
+                p.pain-section__description После работы тело становится тяжелым, а спина и плечи напряженными. Заснуть сложно, а утром снова нет сил. Кажется, будто даже отдых утомляет.
+        .pain-section__cards-block
+            +background-card('Вы чувствуете дискомфорт в шее, плечах, пояснице', 'img/background-card/neck.webp')
+            +background-card('Ложитесь спать уставшей и без сил, но все равно не высыпаетесь', 'img/background-card/insomnia.webp')
+            +background-card('Лёгкая нагрузка для пресса, ягодиц и рук даётся с трудом', 'img/background-card/woman-sitting.webp')
+            +background-card('Хотите вернуть энергию, чтобы достигать своих целей', 'img/background-card/woman-in-dress.webp')
+        .pain-section__promo-card
+            +promo-card('Если вам это знакомо — курс поможет телу отпустить напряжение и вернуть свободу')

@@ -1,0 +1,59 @@
+.format-card
+    background-color: $color-white-100
+    border-radius: $radius-2
+    min-height: 220px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    position: relative
+    overflow: hidden
+
+    +sm-block()
+        min-height: 270px
+
+    +md-block()
+        min-height: 220px
+
+    &::after
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        content: ''
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 41.45%, rgba(255, 255, 255, 0.87) 63.36%, #FFF 74.49%)
+
+    &__header
+        padding: $spacing-3
+        position: relative
+        z-index: 1
+
+    &__title
+        +h3()
+        color: $color-blue-10
+
+    &__image
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &--inverse
+        justify-content: flex-start
+
+        &::after
+            background: linear-gradient(180deg, #FFF 25.51%, rgba(255, 255, 255, 0.87) 36.64%, rgba(255, 255, 255, 0.00) 58.55%)
+
+
+    &--inverse--md-full-height
+        &::after
+
+            +md-block()
+                background: linear-gradient(180deg, #FFF 2%, rgba(255, 255, 255, 0.87) 3.69%, rgba(255, 255, 255, 0.00) 40.55%)
+      

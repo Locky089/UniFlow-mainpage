@@ -1,0 +1,5 @@
+mixin button-right(text, className, dataDisabled, icon)
+    button.button(class= className, href="#" disabled=dataDisabled ? true : false)
+        span.button__text= text
+        span.button__icon
+            +svg('20', '20', icon)

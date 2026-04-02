@@ -1,0 +1,50 @@
+.course-card
+    display: flex
+    flex-direction: column
+    gap: $spacing-1
+
+    &__image
+        display: flex
+        align-items: center
+        justify-content: center
+        aspect-ratio: 1/1
+        border-radius: $spacing-3
+        background-color: $color-blue-1
+        border-radius: $radius-2
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__title
+        font: $font-h4
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: $spacing-1
+
+    &__list
+        display: flex
+        flex-direction: column
+        gap: $spacing-1
+
+    &__list-item
+        display: flex
+        gap: 5px
+        color: $color-text-60
+        font: $font-mob-mini
+        align-items: center
+        height: 18px
+
+    &__list-item-icon
+        height: 16px
+        display: flex
+        align-items: center
+        margin-top: -2px
+
+        svg
+            width: auto
+            height: 16px

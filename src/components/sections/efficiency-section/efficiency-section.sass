@@ -1,0 +1,49 @@
+.efficiency-section
+    padding-top: $spacing-7
+    padding-bottom: $spacing-7
+
+    &__container
+        +container()
+
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: $spacing-3
+
+    &__main-header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__description
+        +description()
+
+    &__cards-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+
+        +md-block()
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: $spacing-3 
+
+    &__promo-card
+        margin-top: $spacing-4

@@ -1,0 +1,118 @@
+@import 'variables/tokens'
+@import 'mixins/typo'
+@import 'mixins/grid'
+@import 'smart-grid'
+@import 'fonts'
+
+// Components
+@import '../components/button/button'
+@import '../components/button-icon/button-icon'
+@import '../components/logo-block/logo-block'
+@import '../components/tag/tag'
+@import '../components/background-card/background-card'
+@import '../components/price-card/price-card'
+@import '../components/promo-card/promo-card'
+@import '../components/feature-card/feature-card'
+@import '../components/focus-card/focus-card'
+@import '../components/feature-item/feature-item'
+@import'../components/result-block/result-block'
+@import'../components/highlight/highlight'
+@import'../components/offer-block/offer-block'
+@import'../components/faq-list/faq-list'
+@import'../components/format-card/format-card'
+@import'../components/feature-item-data/feature-item-data'
+@import'../components/feature-block/feature-block'
+@import'../components/link/link'
+@import'../components/course-card/course-card'
+@import'../components/program-block/program-block'
+@import'../components/feedback/feedback'
+@import'../components/benefit-card/benefit-card'
+@import'../components/main-menu/main-menu'
+@import'../components/mobile-menu/mobile-menu'
+
+
+
+//Sections
+@import'../components/sections/hero-section/hero-section'
+@import'../components/sections/benefit-section/benefit-section'
+@import'../components/sections/question-section/question-section'
+@import'../components/sections/direction-section/direction-section'
+@import'../components/sections/program-section/program-section'
+@import'../components/sections/video-section/video-section'
+@import'../components/sections/team-section/team-section'
+@import'../components/sections/community-section/community-section'
+@import'../components/sections/courses-section/courses-section'
+@import'../components/sections/faq-section/faq-section'
+@import'../components/sections/footer/footer'
+@import'../components/sections/page/page'
+
+
+//Sections
+@import'../components/sections/pain-section/pain-section'
+@import'../components/sections/format-section/format-section'
+@import'../components/sections/efficiency-section/efficiency-section'
+@import'../components/sections/focus-section/focus-section' 
+@import'../components/sections/results-section/results-section'
+@import'../components/sections/offer-section/offer-section'
+@import'../components/sections/white-section/white-section'
+@import'../components/sections/coach-section/coach-section'
+
+
+
+// Здесь — прикладные стили проекта. Токены подключены импортом выше.
+
+// Layout
+body, html
+  margin: 0
+  font: $font-mob-text
+  color: $color-text-100
+  overflow-x: clip
+
+
+.container
+  width: 100%
+  max-width: $container-max-width
+  margin: 0 auto
+  padding: 0 $spacing-4
+  
+  @media (min-width: $breakpoint-tablet)
+    padding: 0 $spacing-6
+
+// Typography (base styles)
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+.is-open
+  display: block
+
+.unscrollable
+  overflow: clip
+
+// .h1
+//   font: $font-mob-h1
+//   color: $color-text-100
+  
+//   @media (min-width: $breakpoint-tablet)
+//     font: $font-h1
+
+// .h2
+//   font: $font-mob-h2
+//   color: $color-text-100
+  
+//   @media (min-width: $breakpoint-tablet)
+//     font: $font-h2
+
+// .h3
+//   font: $font-mob-h3
+//   color: $color-text-100
+  
+//   @media (min-width: $breakpoint-tablet)
+//     font: $font-h3
+
+// Components
+
+
+// Sections
+
+  
+  

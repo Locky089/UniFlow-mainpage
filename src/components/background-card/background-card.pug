@@ -1,0 +1,11 @@
+include ../mixins/svg
+
+mixin background-card(title, img)
+    - const style = `background-image: url(${img});`
+
+
+    .background-card(style=style)
+        .background-card__content
+            .background-card__icon
+                +svg("20", "20", "info-circle")
+            p.background-card__title= title

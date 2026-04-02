@@ -1,0 +1,40 @@
+mixin format-card(img, title, classname)
+
+    .format-card(class=classname)
+        .format-card__image
+            picture
+                // Desktop 3x
+                source(
+                    media="(min-width: 1199px) and (min-resolution: 3dppx), (min-width: 1199px) and (-webkit-min-device-pixel-ratio: 3)"
+                    srcset=`${img}-desktop@3x.webp 3x`
+                )
+                // Desktop 2x
+                source(
+                    media="(min-width: 1199px) and (min-resolution: 2dppx), (min-width: 1199px) and (-webkit-min-device-pixel-ratio: 2)"
+                    srcset=`${img}-desktop@2x.webp 2x`
+                )
+                // Desktop 1x
+                source(media="(min-width: 1199px)" srcset=`${img}-desktop.webp 1x`)
+
+                // Tablet 3x
+                source(
+                    media="(min-width: 600px) and (min-resolution: 3dppx), (min-width: 600px) and (-webkit-min-device-pixel-ratio: 3)"
+                    srcset=`${img}-tablet@3x.webp 3x`
+                )
+                // Tablet 2x
+                source(
+                    media="(min-width: 600px) and (min-resolution: 2dppx), (min-width: 600px) and (-webkit-min-device-pixel-ratio: 2)"
+                    srcset=`${img}-tablet@2x.webp 2x`
+                )
+                // Tablet 1x
+                source(media="(min-width: 600px)" srcset=`${img}-tablet.webp 1x`)
+
+                // Mobile (fallback)
+                img(
+                    src=`${img}-mobile.webp`
+                    width="360"
+                    height="220"
+                    alt=title
+                )
+        .format-card__header 
+            .format-card__title= title

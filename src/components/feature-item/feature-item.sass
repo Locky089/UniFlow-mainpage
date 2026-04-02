@@ -1,0 +1,57 @@
+.feature-item
+    color: $color-blue-10
+    background-color: $color-white-100
+    border-radius: $radius-2
+    padding: $spacing-3
+    display: flex
+    justify-content: space-between
+    width: 100%
+    flex-direction: column
+    box-sizing: border-box
+    min-height: 176px
+
+    @media (max-width: $breakpoint-tablet)
+        min-height: 124px
+        gap: 16px
+
+    &__icon
+        width: 20px
+        height: 20px
+
+        svg
+            fill: $color-blue-10
+            width: 20px
+            height: 20px
+
+    &__info
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-1
+
+    &__subtitle
+        color: $color-blue-10-40
+        
+        @media (max-width: $breakpoint-tablet)
+            display: none
+    
+    &__title
+        font: $font-h3
+        letter-spacing: -0.02em
+
+        @media (max-width: $breakpoint-tablet)
+            font: $font-mob-h3
+
+    &--full-mobile
+        
+        @media (max-width: $breakpoint-tablet)
+            width: 100%
+            min-height: auto
+            grid-column: 1 / -1;
+
+    &--horizontal-mobile
+
+        @media (max-width: $breakpoint-tablet)
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: normal

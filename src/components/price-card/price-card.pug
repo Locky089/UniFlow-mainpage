@@ -1,0 +1,11 @@
+include ../button/button-link
+include ../mixins/svg
+
+.price-card
+    .price-card__body
+        .price-card__price-block 
+            .price-card__price 3 990 ₽ 
+            .price-card__price.price-card__price--old 3 990 ₽ 
+        .price-card__description Доступ на 28 дней и персональная поддержка
+    .price-card__button 
+        +button-link('Приобрести сейчас', 'button--main button--l button--full-width')

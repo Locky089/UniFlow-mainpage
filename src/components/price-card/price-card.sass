@@ -1,0 +1,46 @@
+.price-card
+    background-color: $color-white-100
+    border-radius: $radius-2
+    padding: $spacing-3
+    display: flex
+    flex-direction: column
+    row-gap: $spacing-3
+
+    @media (min-width: $breakpoint-tablet)
+        row-gap: $spacing-4
+
+    &__body
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+
+        @media (min-width: $breakpoint-tablet)
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: $spacing-4
+
+    &__price-block 
+        display: flex
+        column-gap: $spacing-3
+        flex-wrap: nowrap
+        white-space: nowrap
+
+    &__price
+        font: $font-mob-h1
+        color: $color-text-100
+        letter-spacing: -0.04em
+
+        +sm-block()
+            font: $font-h1
+            
+
+        &--old
+            color: $color-text-20
+            text-decoration: line-through
+
+
+    &__description
+        font: $font-mob-text
+        color: $color-text-60
+        max-width: 220px

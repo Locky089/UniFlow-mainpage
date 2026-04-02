@@ -1,0 +1,71 @@
+.coach-section
+    padding-top: calc($spacing-8 + $spacing-5)
+    padding-bottom: calc($spacing-8 + $spacing-5)
+    background-color: $color-blue-1
+    background: url('../img/bg/coach.webp') no-repeat
+    background-position: center
+    background-size: cover
+    margin-top: -30px
+
+
+    +sm-block()
+        background-image: url('../img/bg/coach-tablet.webp')
+        padding-bottom: 340px
+        padding-top: calc($spacing-10 + $spacing-5)
+
+    +md-block()
+        background-image: url('../img/bg/coach-desktop.webp')
+        padding-bottom: 240px
+
+    &__container
+        +container()
+
+        +sm-block()
+            max-width: 620px
+            margin-left: 0
+
+        +md-block()
+            +container()
+
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: 260px
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+    &__main-header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__description
+        +description()
+
+        +sm-block()
+            max-width: 680px
+
+    &__cards-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+
+        +sm-block()
+            max-width: 360px
+
+        +md-block()
+            max-width: 580px
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: $spacing-3
+            width: 100%

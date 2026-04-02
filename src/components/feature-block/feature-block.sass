@@ -1,0 +1,140 @@
+.feature-block
+    background-color: $color-blue-4
+    border-radius: $radius-3
+    padding: $spacing-1
+    padding-top: 212px
+    box-sizing: border-box
+
+    +sm-block()
+        padding: $spacing-3
+        padding-top: 390px
+
+    +md-block()
+        padding-top: 0
+        padding: $spacing-5
+        width: 100%
+        
+    
+
+    &__content
+        background-color: $color-white-100
+        padding: $spacing-3
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-4
+        border-radius: $radius-2
+        box-sizing: border-box
+
+        +sm-block()
+            padding: $spacing-5
+
+        +md-block()
+            max-width: 50%
+            
+
+    &__header
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+
+        
+    &__count
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-1
+        font: $font-mob-tag
+        color: $color-text-60
+
+        +sm-block()
+            flex-direction: row
+            column-gap: $spacing-3
+            font: $font-text
+
+    &__number
+        display: flex
+
+    &__number-current
+        color: $color-text-100
+    
+    &__title
+        +h3()
+
+        +sm-block()
+            font: $font-h5
+
+    &__item-list 
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-2
+        padding-top: $spacing-3
+        border-top: 1px solid $color-blue-2
+
+        +sm-block()
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: $spacing-3
+        
+
+    &__item
+        display: flex
+        row-gap: $spacing-1
+        font: $font-text
+        gap: $spacing-2
+        align-items: flex-start
+
+        +sm-block()
+            row-gap: $spacing-3
+            flex-direction: column
+            padding-right: $spacing-3
+
+
+    &__item-icon
+        width: 40px
+        height: 40px
+        background-color: $color-blue-1
+        border-radius: 50%
+        flex-shrink: 0
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+            width: 24px
+            height: 24px
+            fill: $color-blue-10
+
+    &--1
+        background-image: url('../img/direction-section/direction-section-1-mobile.webp')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+        +sm-block()
+            background-image: url('../img/direction-section/direction-section-1-tablet.webp')
+
+        +md-block()
+            background-image: url('../img/direction-section/direction-section-1-desktop.webp')
+
+    &--2
+        background-image: url('../img/direction-section/direction-section-2-mobile.webp')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+        +sm-block()
+            background-image: url('../img/direction-section/direction-section-2-tablet.webp')
+
+        +md-block()
+            background-image: url('../img/direction-section/direction-section-2-desktop.webp')
+
+    &--3
+        background-image: url('../img/direction-section/direction-section-3-mobile.webp')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+        +sm-block()
+            background-image: url('../img/direction-section/direction-section-3-tablet.webp')
+
+        +md-block()
+            background-image: url('../img/direction-section/direction-section-3-desktop.webp')

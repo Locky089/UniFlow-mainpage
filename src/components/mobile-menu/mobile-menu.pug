@@ -1,0 +1,33 @@
+include ../mixins/svg
+
+.mobile-menu__overlay.mobile-menu-js
+    .mobile-menu
+        button.mobile-menu__close.mobile-menu__close-js
+            +svg("20", "20", "cross")
+        .mobile-menu__content
+            .mobile-menu__logo 
+                img(src="img/logo.svg", alt="Uniflow", width="110", height="24")
+
+            ul.mobile-menu__list-nav
+                li 
+                    a(href="#") Сезонные активности
+                li
+                    a(href="#benefit").mobile-menu__link Преимущества
+                li
+                    a(href="#direction").mobile-menu__link Направления
+                li
+                    a(href="#club-card").mobile-menu__link Занятия по Клубной Карте
+                li
+                    a(href="#fundamental-courses").mobile-menu__link Фундаментальные курсы
+                li
+                    a(href="#express-courses").mobile-menu__link Экспресс-курсы
+                li
+                    a(href="#team").mobile-menu__link Команда
+                li
+                    a(href="#feedback").mobile-menu__link Отзывы
+                li
+                    a(href="#faq") Часто задаваемые вопросы
+        .mobile-menu__footer 
+            .mobile-menu__buttons 
+                +button('Войти', 'button--secondary button--m button--full-width')
+                +button('Зарегистрироваться', 'button--main button--m button--full-width')      

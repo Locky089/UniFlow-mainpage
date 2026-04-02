@@ -1,0 +1,97 @@
+.focus-card
+    padding: $spacing-6
+    border-radius: $radius-2
+    background-color: $color-text-20
+    min-height: 280px
+    box-sizing: border-box
+    display: flex
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    color: $color-white-100
+    min-height: 380px
+
+    +sm-block()
+        min-height: 516px
+
+    +md-block()
+        min-height: 400px
+    
+
+    &__content
+        padding: $spacing-3
+        border-radius: $radius-2
+        border: 1px solid $color-white-30
+        background-color: transparent
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        transition: .2s ease-in
+
+    &__title
+        +h3()
+        color: $color-white-100
+        transition: .2s ease-in
+        margin-bottom: $spacing-3
+
+    &__description
+        +text()
+        color: $color-white-100
+        transition: .2s ease-in
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        /* Firefox fallback */
+        max-height: 3em /* 1.5 × 2 */
+        transition: .3s ease-in
+        position: relative;
+
+
+
+    &__dropdown-button
+        margin-top: $spacing-3
+
+        @media screen and (min-width: 1024px)
+            display: none
+
+    
+    &--hidden-mobile
+        .focus-card__description
+            display: none
+
+            @media screen and (min-width: 1024px)
+                display: block
+
+    &.active
+        .focus-card__content
+            background-color: $color-white-100
+            overflow: hidden
+
+        .focus-card__title
+            color: $color-text-100
+
+        .focus-card__description
+            color: $color-text-100
+            -webkit-line-clamp: unset
+            max-height: 500px
+            overflow: visible
+            transition: .3s ease-in
+
+    @media screen and (min-width: 1024px)
+        &:hover
+            .focus-card__content
+                background-color: $color-white-100
+                overflow: hidden
+
+            .focus-card__title
+                color: $color-text-100
+
+            .focus-card__description
+                color: $color-text-100
+                -webkit-line-clamp: unset
+                max-height: 500px
+                overflow: visible
+                transition: .3s ease-in

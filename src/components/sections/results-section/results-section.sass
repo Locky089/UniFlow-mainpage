@@ -1,0 +1,65 @@
+.results-section
+    padding-top: $spacing-7
+    padding-bottom: $spacing-7
+
+    +md-block()
+        padding-bottom: 120px
+
+    &__container
+        +container()
+
+
+    &__header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 730px
+            margin-left: auto
+            margin-right: auto
+
+    &__main-header-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3 
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 680px
+
+    &__subtitle
+        +tag()
+
+    &__title
+        +h2()
+
+    &__description
+        +description()
+        max-width: 580px
+
+        +md-block()
+            align-items: center
+            text-align: center
+            max-width: 680px
+
+    &__cards-block
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-7
+
+        +sm-block()
+            row-gap: $spacing-8
+
+        +md-block()
+            row-gap: $spacing-5
+
+            

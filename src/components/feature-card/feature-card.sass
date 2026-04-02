@@ -1,0 +1,114 @@
+.feature-card
+    background-color: $color-text-20
+    padding: $spacing-3
+    border-radius: $radius-2
+
+    +sm-block()
+        padding: $spacing-5
+
+    +md-block()
+        padding: $spacing-8
+
+
+    &__container
+        border-radius: $radius-2
+        background-color: $color-white-100
+        padding: $spacing-3
+
+    &__header
+        border-bottom: 1px solid $color-blue-10-10
+        padding-bottom: $spacing-3
+        margin-bottom: $spacing-3
+
+    &__counter
+        display: flex
+        +text()
+        color: $color-text-60
+        margin-bottom: $spacing-4
+
+        +sm-block()
+            margin-bottom: $spacing-5
+
+        +md-block()
+            margin-bottom: $spacing-9
+
+    &__counter-current
+        color: $color-text-100
+
+    &__title
+        +h3()
+
+    &__body
+        display: flex
+        flex-direction: column
+        row-gap: $spacing-3
+
+        +sm-block()
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            column-gap: $spacing-1
+
+    &__item
+        display: flex
+        gap: $spacing-2
+        align-items: center
+        +text()
+        color: $color-text-100
+
+        +sm-block()
+            flex-direction: column
+            align-items: flex-start
+
+    &__item-icon
+        flex-shrink: 0
+        width: 40px
+        height: 40px
+        background-color: $color-blue-2
+        border-radius: $radius-4
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+            width: 24px
+            height: 24px
+            fill: $color-text-100
+
+
+    //Розовая и синяя карточки
+
+    &--pink
+        background: $gradient-pink
+        background-image: url('../img/bg/work-card-bg-pink-m.webp')
+        background-size: cover
+        background-repeat: no-repeat
+
+        +sm-block()
+            background-image: url('../img/bg/work-card-bg-pink-tablet.webp') 
+        
+        +md-block()
+            background-image: url('../img/bg/work-card-bg-pink-desktop.webp')
+
+        .feature-card__item-icon
+            background-color: $color-pink-1
+
+            svg
+                fill: $color-pink-3
+
+    &--blue   
+        background: $gradient-blue
+        background-image: url('../img/bg/work-card-bg-blue-m.webp')
+        background-size: cover
+        background-repeat: no-repeat
+
+        +sm-block()
+            background-image: url('../img/bg/work-card-bg-blue-tablet.webp')
+
+        +md-block()
+            background-image: url('../img/bg/work-card-bg-blue-desktop.webp')
+
+        .feature-card__item-icon
+            background-color: $color-blue-1
+
+            svg
+                fill: $color-blue-10

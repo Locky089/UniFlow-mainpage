@@ -1,0 +1,28 @@
+include ../mixins/svg
+
+mixin feature-card(current, title, className, items)
+    .feature-card(class= className)
+        .feature-card__container 
+            .feature-card__header
+                .feature-card__counter 
+                    .feature-card__counter-current= current
+                    | /2
+                h3.feature-card__title= title
+            .feature-card__body
+                each item in items
+                    .feature-card__item
+                        .feature-card__item-icon
+                            +svg("24", "24", item.icon)
+                        .feature-card__item-label!= item.label
+                //- .feature-card__item
+                //-     .feature-card__item-icon 
+                //-         +svg("24", "24", "settings")
+                //-     .feature-card__item-label Улучшает подвижность суставов
+                //- .feature-card__item
+                //-     .feature-card__item-icon 
+                //-         +svg("24", "24", "settings")
+                //-     .feature-card__item-label Снижает внутреннее напряжение
+                //- .feature-card__item
+                //-     .feature-card__item-icon 
+                //-         +svg("24", "24", "settings")
+                //-     .feature-card__item-label Настраивает ваше тело на сон

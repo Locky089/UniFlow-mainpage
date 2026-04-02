@@ -1,0 +1,20 @@
+.button-icon
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    border: none
+    +gradient-main()
+
+    &:hover
+        +gradient-text()
+
+        &:active
+            +gradient-text-dark()
+
+    svg
+        width: 20px
+        height: 20px
+        fill: $color-white-100

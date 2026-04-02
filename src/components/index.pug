@@ -1,0 +1,48 @@
+include ../components/mixins/svg
+include ../components/button/button
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Uniflow
+        meta(name="description", content="Uniflow")
+        meta(name="keywords", content="Uniflow")
+        meta(name="theme-color" content="#4598FB")
+        link(rel="icon" href="./favicon.svg" sizes="any" type="image/svg+xml")
+        link(rel="icon" href="./favicon-32.png" sizes="32x32")
+        link(rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180")
+        link(rel="preload", href="fonts/Manrope-Medium.woff2", as="font", crossorigin="anonymous")
+        link(rel="preload", href="fonts/Manrope-SemiBold.woff2", as="font", crossorigin="anonymous")
+        link(rel="preload", href="fonts/Manrope-Regular.woff2", as="font", crossorigin="anonymous")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css")
+        link(rel="stylesheet", href="styles/style.css")
+        
+
+
+
+    body.page
+        .page__header.page__header--fixed
+            .page__header-container
+                include ../components/main-menu/main-menu
+        include ../components/sections/hero-section/hero-section
+        include ../components/sections/benefit-section/benefit-section
+        include ../components/sections/question-section/question-section
+        include ../components/sections/direction-section/direction-section
+        include ../components/sections/program-section/program-section
+        include ../components/sections/video-section/video-section
+        include ../components/sections/team-section/team-section
+        include ../components/sections/community-section/community-section
+
+        .white-section.white-section--round-top
+            include ../components/sections/faq-section/faq-section
+            include ../components/sections/footer/footer
+
+        include ../components/mobile-menu/mobile-menu
+
+
+        script(src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js")
+        script(src="js/main.js" defer)

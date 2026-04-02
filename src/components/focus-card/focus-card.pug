@@ -1,0 +1,13 @@
+include ../button/button
+
+mixin focus-card(img, title, description)
+
+    - const style = `background-image: url(${img});`
+
+    .focus-card.focus-card--hidden-mobile(style=style)
+        .focus-card__content
+            h3.focus-card__title= title
+            .focus-card__dropdown-block
+                p.focus-card__description= description
+                .focus-card__dropdown-button
+                    +button('Подробнее', 'button--tertiary button--m')

@@ -1,0 +1,8 @@
+include ../mixins/svg
+
+mixin highlight(text)
+
+    .highlight
+        .highlight__icon 
+            +svg("20", "20", "settings")
+        .highlight__text= text

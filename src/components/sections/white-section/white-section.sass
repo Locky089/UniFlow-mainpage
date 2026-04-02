@@ -1,0 +1,29 @@
+.white-section
+    background-color: $color-white-100
+    padding-top: $spacing-1
+    padding-bottom: $spacing-1
+    border-radius: $radius-3
+    position: relative
+    z-index: 1
+    margin-top: -$spacing-5
+    position: relative
+    z-index: 1
+
+    +sm-block()
+        padding-top: $spacing-3
+        padding-bottom: $spacing-3
+
+    +md-block() 
+        padding-top: $spacing-7
+        padding-bottom: $spacing-7
+
+
+    &--round-top
+        border-bottom-right-radius: 0
+        border-bottom-left-radius: 0
+
+        +sm-block()
+            padding-bottom: 0
+
+        +md-block()
+            padding-bottom: 0

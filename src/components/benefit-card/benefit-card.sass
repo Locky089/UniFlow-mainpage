@@ -1,0 +1,156 @@
+.benefit-card
+    padding: $spacing-3
+    border-radius: $radius-3
+    background-color: $color-gray
+    box-sizing: border-box
+    flex-shrink: 1
+    width: 100%
+
+    +sm-block()
+        height: 290px
+        padding: $spacing-5
+
+
+    +md-block()
+        padding: $spacing-5
+        display: flex
+        flex-direction: column
+
+
+    &__content
+        max-width: 290px
+
+    &__icon
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        background-color: $color-pink-2
+        margin-bottom: $spacing-4
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__image-block
+        margin-bottom: 134px
+
+        +md-block()
+            margin-bottom: auto
+
+    &__title
+        +h3()
+
+    &__description
+        +text()
+        margin-top: 16px
+
+
+    &--1
+        padding-bottom: 290px
+        min-height: 400px
+
+        background-image: url('../img/benefit/first.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+        +sm-block()
+            min-height: auto
+            padding-bottom: $spacing-5
+            background-image: url('../img/benefit/first-tablet.png')
+
+        +md-block()
+            flex-basis: 45%
+            height: 100%
+            background-image: url('../img/benefit/first-desktop.png')
+            padding-bottom: $spacing-5
+
+        .benefit-card__content
+            +md-block()
+                max-width: 340px
+
+    &--2
+        padding-bottom: 190px
+        min-height: 330px
+
+        background-image: url('../img/benefit/second.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+        +sm-block()
+            padding-bottom: $spacing-5
+            min-height: auto
+            background-image: url('../img/benefit/second-tablet.png')
+            background-size: contain
+            background-position: right center
+
+        +md-block()
+            height: 100%
+            padding-bottom: $spacing-5
+            box-sizing: border-box
+            min-height: auto
+            background-image: url('../img/benefit/second-desktop.png')
+            background-position: center
+            background-size: cover
+            
+    &--3
+        min-height: 196px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+        +md-block()
+            flex-basis: 50%
+            min-height: auto
+            height: 100%
+
+
+    &--4
+        min-height: 196px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+        +md-block()
+            flex-basis: 50%
+            min-height: auto
+            height: 100%
+
+    &--5
+        min-height: 330px
+
+        background-image: url('../img/benefit/fifth.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+        +sm-block()
+            height: 358px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        +md-block()
+            height: 100%
+            padding-bottom: $spacing-5
+            min-height: auto
+
+    &--6 
+        padding-bottom: 250px
+        min-height: 440px 
+        background-image: url('../img/benefit/sixth.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+        +sm-block()
+            background-image: url('../img/benefit/sixth-tablet.png')
+            min-height: auto
+            padding-bottom: $spacing-5
+
+        +md-block()
+            height: 100%
+            padding-bottom: $spacing-5
+            min-height: auto
+            width: 100%
+            background-image: url('../img/benefit/sixth-desktop.png')

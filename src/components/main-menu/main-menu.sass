@@ -1,0 +1,138 @@
+.main-menu
+    background-color: $color-white-100
+    padding: 8px
+    padding-left: 20px
+    border-radius: 100px
+    height: 56px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+
+    &__content
+        display: flex
+        align-items: center
+        width: 100%
+
+    &__nav
+        display: none
+        list-style: none
+        margin: 0
+        padding: 0
+
+        +md-block()
+            display: flex
+            gap: $spacing-4
+
+    &__nav-item
+        position: relative
+
+    &__nav-link
+        display: inline-flex
+        align-items: center
+        font: $font-text
+        text-decoration: none
+        color: $color-text-100
+        gap: 4px
+
+
+    &__nav-item--dropdown
+        
+        &:hover
+            
+            > .main-menu__list-wrapper--dropdown-inner
+                display: flex
+                top: 100%
+                left: 50%
+                position: absolute
+                content: ''
+                transform: translateX(-50%) 
+
+            .main-menu__nav-link-icon 
+                transform: rotate(-180deg)
+
+    &__nav-link-icon 
+        display: flex
+        justify-content: center
+        width: 16px
+        height: 16px
+
+    &__logo
+        margin-right: $spacing-4
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__user-block
+        margin-left: auto
+        display: flex
+        align-items: center
+        gap: 30px
+
+    &__user-block-item--mobile-only
+        +md-block()
+            display: none
+
+    &__user-block-item--desktop-only
+        display: none
+        
+        +md-block()
+            display: flex
+
+    &__list-wrapper
+        padding-top: 32px
+
+    &__list-wrapper--dropdown-inner
+        display: none
+
+        &::after
+            display: block
+            width: 18px
+            height: 16px
+            content: ''
+            position: absolute
+            bottom: calc(100% - 38px)
+            left: 50%
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0px 10px 20px 10px
+            border-color: transparent transparent #ffffff transparent
+            transform: rotate(0deg) translateX(-50%)
+
+
+    &__list
+        margin: 0
+        padding: $spacing-2
+        list-style: none
+        background-color: $color-white-100
+        border-radius: 20px
+        width: 278px
+        display: flex
+        flex-direction: column
+        flex-shrink: 0
+        box-sizing: border-box
+        
+
+        li
+            display: flex
+            width: 100%
+
+        a
+            height: 40px
+            width: 100%
+            box-sizing: border-box
+            display: flex
+            white-space: nowrap
+            align-items: center
+            padding-left: $spacing-2
+            padding-right: $spacing-2
+            text-decoration: none
+            color: $color-text-100
+            transition: .2s ease-in
+            font: $font-text
+            color: $color-text-100
+
+
+            &:hover
+                color: $color-blue-4
+                transition: .2s ease-in

@@ -1,0 +1,63 @@
+.promo-card
+    display: flex
+    padding: 1px
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    align-self: stretch
+    border-radius: $radius-2
+    +gradient-main()
+
+    +md-block()
+        border-radius: $radius-4
+
+    &__inner
+        display: flex
+        padding: $spacing-3
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        gap: $spacing-3
+        align-self: stretch
+        border-radius: $radius-2
+        background-color: $color-white-100
+
+        +md-block()
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            align-items: center
+            border-radius: $radius-4
+
+    &__header
+        display: flex
+        flex-direction: column
+        gap: $spacing-2
+
+        +md-block()
+            flex-direction: row
+            align-items: center
+
+    &__icon
+        width: 40px
+        height: 40px
+        border-radius: $radius-4
+        background-color: $color-blue-4
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-shrink: 0
+
+        svg
+            fill: $color-white-100
+            width: 20px
+            height: 20px
+
+    &__title
+        font: $font-mob-h4
+        color: $color-text-100
+
+        +l-block()
+            font: $font-large-h4
+
+    &__button
+        width: 100%

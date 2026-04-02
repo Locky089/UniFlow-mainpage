@@ -1,0 +1,22 @@
+.courses-section(id="express-courses")
+    .courses-section__inner
+        .courses-section__container
+            .courses-section__header
+                .courses-section__header-text
+                    h2.courses-section__title Экспресс-курсы
+                    p.courses-section__description Короткие курсы с оборудованием и специальными техниками, направленные на оперативное решение проблем со спиной.
+                a(href="#").link Все курсы
+                    span.link__icon 
+                        +svg("16", "16", "chevron-right") 
+            .courses-section__cards-block.swiper.swiper-courses-express-js
+                .courses-section__cards-block-wrapper.swiper-wrapper
+                    .swiper-slide
+                        include ../../course-card/course-card-1
+                    .swiper-slide
+                        include ../../course-card/course-card-2
+                    .swiper-slide
+                        include ../../course-card/course-card-3
+                    .swiper-slide
+                        include ../../course-card/course-card-4
+                    .swiper-slide
+                        include ../../course-card/course-card-5

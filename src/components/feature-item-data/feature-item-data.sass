@@ -1,0 +1,17 @@
+.feature-item-data
+    background-color: $color-white-100
+    padding: $spacing-3
+    border-radius: $radius-2
+
+    &__title
+        +h1()
+        margin-bottom: $spacing-4
+        +gradient-main()
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        display: inline-flex
+
+    &__text
+        +text()
+        color: black

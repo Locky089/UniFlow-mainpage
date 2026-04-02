@@ -1,0 +1,76 @@
+.faq-list
+
+    display: flex
+    flex-direction: column
+    row-gap: $spacing-2
+
+    +sm-block()
+        row-gap: $spacing-3
+
+    +md-block()
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: $spacing-3 
+
+    &__col
+        display: flex
+        flex-direction: column
+        gap: $spacing-1
+
+    &__item
+        border-radius: $radius-2
+        background-color: $color-blue-2
+
+        &.active
+
+            .faq-list__item-body
+                display: block
+
+            .faq-list__item-close
+                background-color: $color-white-100
+
+                svg
+                    transform: rotate(-45deg)
+
+    &__item-close
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-shrink: 0
+        background-color: transparent
+        transition: background-color .2s
+        border-radius: $radius-1
+
+        svg
+            width: 20px
+            height: 20px
+            fill: $color-text-100
+            transition: transform .2s
+        
+
+    &__item-header
+        display: flex
+        gap: $spacing-3
+        padding: $spacing-3
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+
+        &:hover .faq-list__item-close
+            background-color: $color-white-100
+
+
+    &__item-title
+        +h4()
+
+    &__item-body  
+        padding: $spacing-3
+        padding-right: $spacing-6
+        padding-top: 0
+        color: $color-text-100
+        display: none
+
+        +text()
+

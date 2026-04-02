@@ -1,0 +1,50 @@
+.hero-section
+    background-color: $color-text-20
+    overflow: hidden
+    position: relative
+    padding-top: 90px
+    padding-bottom: 344px
+    background-image: url('../img/hero-section/hero-section-mobile.webp')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    +sm-block()
+        padding-top: 120px
+        padding-bottom: 568px   
+        background-image: url('../img/hero-section/hero-section-tablet.webp')
+
+    +md-block()
+        padding-top: 194px
+        padding-bottom: 174px
+        background-image: url('../img/hero-section/hero-section-desktop.webp')
+
+    &__container
+        +container()
+
+        +sm-block()
+            +container()
+
+
+    &__text-block
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        max-width: 500px
+        align-items: flex-start
+            
+
+    &__main-header-block
+
+    &__title
+        +h1()
+
+    &__button
+        margin-top: 30px    
+
+        +sm-block()
+            margin-top: $spacing-2
+
+    &__desctiption
+        +text()
+            

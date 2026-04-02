@@ -1,0 +1,52 @@
+include ../highlight/highlight
+
+mixin result-block(className, title, description, imageSrc, highlightText)
+
+    .result-block(class=className)
+        .result-block__container 
+            .result-block__row
+                .result-block__col
+                    .result-block__image
+                        picture
+                            // Desktop 3x
+                            source(
+                                media="(min-width: 1200px) and (min-resolution: 3dppx), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3)"
+                                srcset=`${imageSrc}-desktop@3x.webp 3x`
+                            )
+                            // Desktop 2x
+                            source(
+                                media="(min-width: 1200px) and (min-resolution: 2dppx), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2)"
+                                srcset=`${imageSrc}-desktop@2x.webp 2x`
+                            )
+                            // Desktop 1x
+                            source(media="(min-width: 1200px)" srcset=`${imageSrc}-desktop@2x.webp 1x`)
+
+                            // Tablet 3x
+                            source(
+                                media="(min-width: 768px) and (min-resolution: 3dppx), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3)"
+                                srcset=`${imageSrc}-tablet@3x.webp 3x`
+                            )
+                            // Tablet 2x
+                            source(
+                                media="(min-width: 768px) and (min-resolution: 2dppx), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2)"
+                                srcset=`${imageSrc}-tablet@2x.webp 2x`
+                            )
+                            // Tablet 1x
+                            source(media="(min-width: 768px)" srcset=`${imageSrc}-tablet.webp 1x`)
+
+                            // Mobile (fallback)
+                            img(
+                                src=`${imageSrc}-mobile.webp`
+                                srcset=`${imageSrc}-mobile@2x.webp 2x, ${imageSrc}-mobile@3x.webp 3x`
+                                width="360"
+                                height="220"
+                                alt="Стретчинг с массажным ролом"
+                            )
+                .result-block__col
+                    .result-block__text-container
+                        .result-block__text-block
+                            h2.result-block__title= title
+                            .result-block__description!= description
+                            if highlightText
+                                .result-block__highlight
+                                    +highlight(highlightText)
