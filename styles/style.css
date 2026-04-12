@@ -902,7 +902,7 @@ p + p {
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-width: 1240px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -2114,6 +2114,16 @@ p + p {
   padding: 30px;
   background-color: #F9FAFB;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .feedback__user {
   display: -webkit-box;
@@ -2130,6 +2140,7 @@ p + p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2156,13 +2167,31 @@ p + p {
 }
 .feedback__text {
   font: 16px/135% "Manrope-Medium", sans-serif;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.feedback__text.is-expanded {
+  -webkit-line-clamp: unset;
+}
+.feedback__read-more {
+  font: 16px/135% "Manrope-Medium", sans-serif;
+  color: #C483AD;
+  cursor: pointer;
   margin-bottom: 50px;
+  display: none;
+}
+.feedback__read-more.is-visible {
+  display: block;
 }
 .feedback__feed-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: auto;
+  padding-top: 30px;
 }
 .feedback__feed-images a {
   display: -webkit-box;
@@ -2174,6 +2203,10 @@ p + p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .feedback__feed-images a img {
   width: 100%;
@@ -2794,7 +2827,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -2805,7 +2838,7 @@ p + p {
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-width: 1240px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -2820,7 +2853,7 @@ p + p {
   -ms-flex-direction: column;
   flex-direction: column;
   row-gap: 16px;
-  max-width: 500px;
+  max-width: 520px;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -2873,7 +2906,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -3142,7 +3175,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -3153,7 +3186,7 @@ p + p {
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-width: 1240px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -3231,7 +3264,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -3336,7 +3369,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -3626,7 +3659,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -3936,8 +3969,8 @@ p + p {
   border-radius: 100%;
 }
 .team-section .swiper-pagination-bullet-active .progress-circle {
-  -webkit-animation: load 5s linear forwards;
-  animation: load 5s linear forwards;
+  -webkit-animation: load 10s linear forwards;
+  animation: load 10s linear forwards;
 }
 
 @-webkit-keyframes load {
@@ -3967,7 +4000,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4047,7 +4080,10 @@ p + p {
   }
 }
 .community-section__slider {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+}
+.community-section .swiper-slide {
+  height: auto;
 }
 .community-section .swiper-pagination-bullet {
   width: 7px;
@@ -4177,7 +4213,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4271,7 +4307,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4358,7 +4394,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4373,7 +4409,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4507,7 +4543,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4682,7 +4718,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4816,7 +4852,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -4964,7 +5000,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -5108,7 +5144,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -5179,7 +5215,7 @@ p + p {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -5196,7 +5232,7 @@ p + p {
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-width: 1240px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
