@@ -2,6 +2,10 @@
     padding: $spacing-4
     background-color: $color-gray
     border-radius: $radius-3
+    display: flex
+    flex-direction: column
+    height: 100%
+    box-sizing: border-box
 
     &__user
         display: flex
@@ -13,6 +17,7 @@
         width: 50px
         height: 50px
         border-radius: 50%
+        overflow: hidden
         display: flex
         justify-content: center
         align-items: center
@@ -32,17 +37,38 @@
 
     &__text
         font: $font-text
+        margin-bottom: $spacing-2
+        display: -webkit-box
+        -webkit-line-clamp: 8
+        -webkit-box-orient: vertical
+        overflow: hidden
+
+        &.is-expanded
+            -webkit-line-clamp: unset
+
+    &__read-more
+        font: $font-text
+        color: $color-pink-3
+        cursor: pointer
         margin-bottom: 50px
+        display: none
+
+        &.is-visible
+            display: block
 
     &__feed-images
         display: flex
         margin-top: auto
+        padding-top: $spacing-4
 
         a
             display: flex
             justify-content: center
             align-items: center
-
+            width: 76px
+            height: 76px
+            border-radius: 8px
+            overflow: hidden
 
             img
                 width: 100%

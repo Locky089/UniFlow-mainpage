@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 20,
         },
       },
@@ -188,8 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
+    speed: 600,
     autoplay: {
-        delay: 5000,
+        delay: 10000,
         disableOnInteraction: false
       },
     pagination: {
@@ -220,12 +221,25 @@ document.addEventListener("DOMContentLoaded", () => {
                   <circle cx="24" cy="24" r="20"></circle>
                 </svg>
               </span>
-              <img class="person-photo" src="img/team/team-${(index + 1)}.webp">
+              <img class="person-photo" src="img/team/team-${(index + 1)}.jpg">
             </span>`;
         },
       },
   });
 
+
+  // === Кнопка "Читать далее" в отзывах ===
+  document.querySelectorAll('.feedback').forEach(function(card) {
+    var text = card.querySelector('.feedback__text');
+    var btn = card.querySelector('.feedback__read-more');
+    if (text && btn && text.scrollHeight > text.clientHeight) {
+      btn.classList.add('is-visible');
+      btn.addEventListener('click', function() {
+        text.classList.toggle('is-expanded');
+        btn.textContent = text.classList.contains('is-expanded') ? 'Скрыть' : 'Читать далее';
+      });
+    }
+  });
 
   // === ЗАПУСК ВСЕХ ФУНКЦИЙ ===
   initAccordeonFaq();
