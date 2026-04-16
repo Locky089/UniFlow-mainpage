@@ -2503,6 +2503,13 @@ p + p {
   text-decoration: none;
   color: #060048;
   gap: 4px;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+.main-menu__nav-link:hover {
+  color: #93C2FF;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 .main-menu__nav-item--dropdown:hover > .main-menu__list-wrapper--dropdown-inner {
   display: -webkit-box;
