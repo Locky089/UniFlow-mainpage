@@ -1,4 +1,4 @@
-mixin button-link(text, className)
-    a.button(class= className, href="#")
-        span.button__content    
+mixin button-link(text, className, href='#')
+    a.button(class= className, href= href)
+        span.button__content
             span.button__text= text
