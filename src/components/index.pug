@@ -6,9 +6,31 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Uniflow
-        meta(name="description", content="Uniflow")
-        meta(name="keywords", content="Uniflow")
+
+        //- SEO
+        title UniFlow — подтянутое тело без изнурительных тренировок
+        meta(name="description", content="Система домашних тренировок, которая ведёт к подтянутому и здоровому телу через комплексный подход и поддержку экспертов. 120 000 учеников за 9 лет.")
+        link(rel="canonical" href="https://uniflow.fit/")
+
+        //- Open Graph (для соцсетей)
+        meta(property="og:type", content="website")
+        meta(property="og:site_name", content="UniFlow")
+        meta(property="og:url", content="https://uniflow.fit/")
+        meta(property="og:title", content="UniFlow — подтянутое тело без изнурительных тренировок")
+        meta(property="og:description", content="Система домашних тренировок, которая ведёт к подтянутому и здоровому телу через комплексный подход и поддержку экспертов. 120 000 учеников за 9 лет.")
+        meta(property="og:locale", content="ru_RU")
+        //- TODO: добавить og:image (1200x630) когда будет картинка
+        //- meta(property="og:image", content="https://uniflow.fit/img/og-cover.jpg")
+        //- meta(property="og:image:width", content="1200")
+        //- meta(property="og:image:height", content="630")
+
+        //- Twitter Card
+        meta(name="twitter:card", content="summary_large_image")
+        meta(name="twitter:title", content="UniFlow — подтянутое тело без изнурительных тренировок")
+        meta(name="twitter:description", content="Система домашних тренировок, которая ведёт к подтянутому и здоровому телу через комплексный подход и поддержку экспертов. 120 000 учеников за 9 лет.")
+        //- TODO: добавить twitter:image когда будет картинка
+        //- meta(name="twitter:image", content="https://uniflow.fit/img/og-cover.jpg")
+
         meta(name="theme-color" content="#4598FB")
         link(rel="icon" href="./favicon.svg" sizes="any" type="image/svg+xml")
         link(rel="icon" href="./favicon-32.png" sizes="32x32")
@@ -19,26 +41,64 @@ html(lang="ru")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css")
         link(rel="stylesheet", href="styles/style.css")
-        
 
+        //- JSON-LD: Organization (карточка компании в поиске)
+        script(type="application/ld+json").
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "UniFlow",
+              "alternateName": "Pilates Flow",
+              "url": "https://uniflow.fit/",
+              "logo": "https://uniflow.fit/img/logo.svg",
+              "description": "Онлайн-платформа домашних тренировок по пилатесу. Клубная карта, курсы, персональные программы.",
+              "foundingDate": "2017",
+              "founder": [
+                { "@type": "Person", "name": "Александр Грищун" },
+                { "@type": "Person", "name": "Светлана Грин" }
+              ],
+              "sameAs": [
+                "https://www.youtube.com/channel/UCsxPKmL9Rd-7I2oeHuqXxwg",
+                "https://t.me/+M65wy_23IsExNzEy",
+                "https://vk.com/pilates_flow"
+              ]
+            }
+
+        //- JSON-LD: WebSite с SearchAction (шанс на поисковую строку прямо в Google)
+        script(type="application/ld+json").
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "UniFlow",
+              "url": "https://uniflow.fit/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://uniflow.fit/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }
 
 
     body.page
-        .page__header.page__header--fixed
+        header.page__header.page__header--fixed
             .page__header-container
                 include ../components/main-menu/main-menu
-        include ../components/sections/hero-section/hero-section
-        include ../components/sections/benefit-section/benefit-section
-        include ../components/sections/question-section/question-section
-        include ../components/sections/direction-section/direction-section
-        include ../components/sections/program-section/program-section
-        include ../components/sections/video-section/video-section
-        include ../components/sections/team-section/team-section
-        include ../components/sections/community-section/community-section
+        main
+            include ../components/sections/hero-section/hero-section
+            include ../components/sections/benefit-section/benefit-section
+            include ../components/sections/question-section/question-section
+            include ../components/sections/direction-section/direction-section
+            include ../components/sections/program-section/program-section
+            include ../components/sections/video-section/video-section
+            include ../components/sections/team-section/team-section
+            include ../components/sections/community-section/community-section
 
-        .white-section.white-section--round-top
-            include ../components/sections/faq-section/faq-section
-            include ../components/sections/footer/footer
+            .white-section.white-section--round-top
+                include ../components/sections/faq-section/faq-section
+                include ../components/sections/footer/footer
 
         include ../components/mobile-menu/mobile-menu
 

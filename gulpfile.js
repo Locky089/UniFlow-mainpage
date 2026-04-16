@@ -174,7 +174,7 @@ const createWebpInSrc = (done) => {
 
   return src('src/assets/img/**/*.{png,jpg,jpeg}')
     .pipe(newer({ dest: 'src/assets/img', ext: '.webp' }))
-    .pipe(imagemin([webpConvert({ quality: 75 })]))
+    .pipe(imagemin([webpConvert({ quality: 95 })]))
     .pipe(rename({ extname: '.webp' }))
     .pipe(dest('src/assets/img'))
     .on('end', done);
@@ -186,7 +186,7 @@ const convertToWebp = (done) => {
 
   return src('src/assets/img/**/*.{png,jpg,jpeg}')
     .pipe(newer({ dest: 'app/img', ext: '.webp' }))
-    .pipe(imagemin([webpConvert({ quality: 90 })]))
+    .pipe(imagemin([webpConvert({ quality: 95 })]))
     .pipe(rename({ extname: '.webp' }))
     .pipe(dest('app/img'))
     .on('end', done);
