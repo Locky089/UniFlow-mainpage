@@ -3460,6 +3460,9 @@ p + p {
     font: 38px/115% "Manrope-Bold", sans-serif;
   }
 }
+.program-section__title {
+  max-width: 720px;
+}
 .program-section__description {
   font: 16px/135% "Manrope-Medium", sans-serif;
   color: #060048;
