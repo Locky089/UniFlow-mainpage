@@ -3417,6 +3417,11 @@ p + p {
   row-gap: 20px;
   max-width: 580px;
 }
+@media screen and (min-width: 600px) {
+  .program-section__main-header-block {
+    max-width: 680px;
+  }
+}
 @media screen and (min-width: 1199px) {
   .program-section__main-header-block {
     -webkit-box-align: center;
